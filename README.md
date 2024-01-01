@@ -19,27 +19,38 @@ The repository is intended solely for demonstration purposes, and I hereby discl
 ## How to Run  
 For running the application, [Docker](https://docs.docker.com/get-docker/) is the recommended platform. Ensure you have Docker ([refer to the installation guide](https://docs.docker.com/compose/install/)) and docker-compose installed ([refer to the installation guide](https://docs.docker.com/compose/install/)) on your machine. 
 
-0. Clone the repository to your local machine   
+1. Initial setup   
+   1.1 Clone the repository to your local machine
+    ```
+    git clone https://github.com/sarapiscitelli/web-data-extraction.git
+    cd web-data-extraction
+    ```
+   
+   1.2 Ensure your Docker daemon and Docker Compose are running on your local machine
    ```
-   git clone https://github.com/sarapiscitelli/web-data-extraction.git
-   ```    
+   docker --version                                           
+   docker-compose --version
+   ```
+   You should see output similar to the following:  
+   ```console
+   Docker version 24.0.5, build ced0996
+   Docker Compose version v2.20.2-desktop.1
+   ```   
+   1.3 Configure the .env file with the required variables:   
+   ```
+   # scraper backend configurations
+   SCRAPER_BACKEND_PORT=8081
+   SCRAPER_BACKEND_HOST=0.0.0.0
+   SCRAPER_API_V1_STR=/api/v1
+   ```
 
-1. Setting up the .env file  
-    First, configure the .env file with the necessary variables:
-    ```
-    # scraper backend configurations
-    SCRAPER_BACKEND_PORT=8081
-    SCRAPER_BACKEND_HOST=0.0.0.0
-    SCRAPER_API_V1_STR=/api/v1
-    ```
-
-2. Starting the Application  
+3. Starting the Application  
     Execute the following commands to initiate the application:
 
     ```
-    ./start_app.sh build
-    ./start_app.sh run
+    ./start.sh build
+    ./start.sh run
     ```
 
-3. Accessing API Documentation   
+4. Accessing API Documentation   
     Visit http://localhost:8081/docs (adjust the url and port based on your environment settings) to view the API documentation.
