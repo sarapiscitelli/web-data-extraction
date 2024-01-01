@@ -1,0 +1,48 @@
+#**/*.env
+**/*.csv
+**/*addresses.json
+**/*volumes/
+**/*.lock
+**/*.pkl
+**/chroma/*
+
+# IDE
+**/.idea/*
+**/*.iws
+**/*.iml
+**/*.ipr
+**.vscode
+**/*package-lock.json
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# python
+**/__pycache__/
+**/*.pyc
+**/.DS_Store
+**/*.out
+**/*.pyo
+**/*.pyd
+**/*.so
+**/*.dylib
+**/*.egg-info
+**/*.egg
+**/*.whl
+**/*.dist-info
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json

@@ -1,0 +1,21 @@
+version: "3"
+
+networks:
+  default:
+    driver: bridge
+
+services:
+  scraper:
+    build:
+      context: .
+      dockerfile: docker/scraper.Dockerfile
+      args:
+        SCRAPER_BACKEND_PORT: ${SCRAPER_BACKEND_PORT}
+        SCRAPER_BACKEND_HOST: ${SCRAPER_BACKEND_HOST}
+    restart: always
+    ports:
+      - ${SCRAPER_BACKEND_PORT}:${SCRAPER_BACKEND_PORT}
+    environment:
+      SCRAPER_BACKEND_PORT: ${SCRAPER_BACKEND_PORT}
+      SCRAPER_BACKEND_HOST: ${SCRAPER_BACKEND_HOST}
+      SCRAPER_API_V1_STR: ${SCRAPER_API_V1_STR}
