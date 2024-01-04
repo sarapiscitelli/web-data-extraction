@@ -1,8 +1,9 @@
 [tool.poetry]
 name = "web-extraction"
 version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+description = "Crawling and scraping a generic website URL"
+authors = ["Sara Piscitelli <104431794+sarapiscitelli@users.noreply.github.com>"]
+license = "GNU AFFERO GENERAL PUBLIC LICENSE"
 packages = [
     { include = "scrapy_project", from = "." },
     { include = "backend", from = "." },
