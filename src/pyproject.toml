@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "web-extraction"
 version = "0.1.0"
-description = "Crawling and scraping a generic website URL"
+description = "Crawl and scrape a generic website URL"
 authors = ["Sara Piscitelli <104431794+sarapiscitelli@users.noreply.github.com>"]
 license = "GNU AFFERO GENERAL PUBLIC LICENSE"
 packages = [
